@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
 import LoginScreen from './screens/LoginScreen';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Switch from 'react-router-dom';
+import Home from './screens/Home';
+import Register from './screens/Register';
 
-import React from 'react';
-import Home from './components/Home';
 
 
 function App() {
@@ -15,8 +15,10 @@ function App() {
       <div className="App">
         <React.Suspense fallback={<h1>Loading...</h1>}/>
         <Routes>
+      
           <Route path='/' element={<LoginScreen />} exact />
-          <Route path='/home' element={<Home/>} exact/>
+          <Route path='/home' element={<Home/>} />
+          <Route path='/register' element={<Register/>} />
 
         </Routes>
       </div>
