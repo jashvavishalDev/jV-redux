@@ -13,7 +13,7 @@ function Register(props) {
   const [password, setPassword] = useState();
   const userSignin =useSelector(state => state.userSignin);
   const dispatch = useDispatch();
-  const history= useHistory(); 
+  // const history= useHistory(); 
 
   const registerUser=(event)=>{
      event.preventDefault();
